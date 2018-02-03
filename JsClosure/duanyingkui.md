@@ -8,19 +8,17 @@
 
 ```
 	function f1(){
-　　　　	var n = 999;
-　　　　	nAdd = function(){
-			n += 1;
+		var n = 999;
+		nAdd = function(){n += 1}
+		function f2(){
+		console.log(n);
 		}
-　　　　	function f2(){
-			console.log(n);
-　　　　	}
-　　　　	return f2;
-　　	}
-　　var result = f1();
-　　result(); // 999
-　　nAdd();
-　　result(); // 1000
+		return f2;
+	}
+	var result = f1();
+	result(); // 999
+	nAdd();
+	result(); // 1000
 ```
 
 在这段代码中，result实际上就是闭包f2函数。它一共运行了两次，第一次的值是999，第二次的值是1000。这证明了，函数f1中的局部变量n一直保存在内存中，并没有在f1调用后被自动清除。
