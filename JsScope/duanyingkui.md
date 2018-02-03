@@ -45,8 +45,8 @@
 ``` 
 	var scope = "global";
 	function checkScope(){
-		var scope = "local";//同名的
-		return scope;//返回局部变量的值
+		var scope = "local";	//同名的局部变量
+		return scope;			//返回局部变量的值
 	}
 	checkScope()
 
@@ -59,9 +59,9 @@
 ``` 
 	scope = "global";
 	function checkScope2(){
-		scope = "local";//修改了全局变量
-		myscope = "local";//声明了一个全新的全局变量
-		return [scope,myscope];//返回两个值
+		scope = "local";		//修改了全局变量
+		myscope = "local";		//声明了一个全新的全局变量
+		return [scope,myscope];	//返回两个值
 	}
 	checkScope2() 	// => ["local","local"]
 	scope			// => "local"	全局变量修改了
@@ -84,13 +84,14 @@
 ```
 
 
+
 ## 函数作用域和声明提前
 
 在一些类似C语言的编程语言中，花括号内的每一段代码都具有各自的作用域，而且变量在声明它们的代码段之外是不可见的，称为块级作用域(block scope)，而JavaScript中没有块级作用域。JavaScript取而代之地使用了函数作用域(function scope):变量在声明它们的函数体以及这个函数体嵌套的任意函数体内都是有定义的。
 
 比如C语言：
 
-``` 
+```
 	for(int i = 0; i < 10; i++){
 		//i的作用范围只在这个for循环
 	}
@@ -99,11 +100,11 @@
 
 
 JavaScript：
-``` 
+```
 	for(var i = 1; i < 10; i++){
     	//coding
-    }
-    console.log(i); //10  
+	}
+	console.log(i); //10  
 ```
 
 

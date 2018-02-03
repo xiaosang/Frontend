@@ -21,7 +21,7 @@ JS命名空间  |   |     |
 ## 已完成部分
 * Javascript的闭包（closure），对应文件为JsClosure.
 
-* JavaScript作用域(scope),对应文件夹JsScope.
+* JavaScript作用域(scope) ，对应文件夹JsScope.
 
 有待补充……
 
