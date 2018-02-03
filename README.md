@@ -9,8 +9,8 @@ ES6常用函数、ES7、ES8新特性  | 页面常用布局  | gulp构建工具  
 post、get请求  | rem、px、pt、em(使用及区别)   | npm包管理工具  | 计算机网络知识
 cors、jsonp跨域  | 了解一些预处理器  | git工具  | 操作系统知识
 熟悉Vue以及MVVM原理，了解React、Angular  | BootStrap  |   | 数据库知识
-模块机制（AMD、CMD）  |   |    | 
-手写jquery插件  |   |    | 
+模块机制（AMD、CMD）  |   |    | Token认证
+手写jquery插件  |   |    | 性能优化
 设计模式  |   |     | 
 JS命名空间  |   |     | 
 
