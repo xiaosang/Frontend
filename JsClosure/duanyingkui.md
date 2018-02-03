@@ -39,32 +39,31 @@
 
 ```
 	var name = "The Window";
-　　	var object = {
-　　　　name : "My Object",
-　　　　getNameFunc : function(){
-　　　　　　return function(){
-　　　　　　　　return this.name;
-　　　　　　};
-　　　　}
-　　	};
-　　	console.log(object.getNameFunc()());
+	var object = {
+		name : "My Object",
+		getNameFunc : function(){
+			return function(){
+				return this.name;
+			};
+		}
+	};
+	console.log(object.getNameFunc()());
 ```
 
 代码二、
 
 ```
 	var name = "The Window";
-　　	var object = {
-　　　　name : "My Object",
-
-　　　　getNameFunc : function(){
-　　　　　　var that = this;
-　　　　　　return function(){
-　　　　　　　　return that.name;
-　　　　　　};
-　　　　}
-　　};
-　　console.log(object.getNameFunc()());
+	var object = {
+	name : "My Object",
+		getNameFunc : function(){
+			var that = this;
+			return function(){
+				return that.name;
+			};
+		}
+	};
+	console.log(object.getNameFunc()());
 ```
 
 
@@ -73,18 +72,18 @@
 
 ```
 	function outer(){
-        var result = new Array();
-        for(var i = 0; i < 2; i++){	//注：i是outer()的局部变量
-            result[i] = function(){
-               return i;
-            }
-        }
-        return result;	//返回一个函数对象数组
-        //这个时候会初始化result.length个关于内部函数的作用域链
-      }
-      var fn = outer();
-      console.log(fn[0]());	//result：2
-      console.log(fn[1]());	//result：2
+		var result = new Array();
+		for(var i = 0; i < 2; i++){	//注：i是outer()的局部变量
+			result[i] = function(){
+				return i;
+ 			}
+		}
+		return result;	//返回一个函数对象数组
+		//这个时候会初始化result.length个关于内部函数的作用域链
+	}
+	var fn = outer();
+	console.log(fn[0]());	//result：2
+	console.log(fn[1]());	//result：2
 ```
 
 调用fn[0]()的作用域链图：
